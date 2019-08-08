@@ -1,11 +1,11 @@
 # nxpflash
-Download progress:
+## Download progress:
 1. Boot up from serial downloding
 2. Download accessory boot loader
-3. operation:Download image to flash
+3. Download image to flash
 
 
-NXP serial download mode command:
+## NXP serial download mode command:
 1. get status, cmd 0x05 0x05
   0x05, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 2. write file, cmd 0x04, 0x04, 
@@ -22,3 +22,9 @@ cmd | address | zero
 
 the jump address should have a IVT table
 
+
+## Accessory boot loader
+Communication with host, help download data to norflash.
+
+1. check connection, send ping check if received ok
+2. send buffer and write to flash.
